@@ -2,8 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import ToDoList, Item
 from .forms import CreateNewList
-# Create your views here.
 
+from django.contrib.auth.decorators import login_required
+# Create your views here.
+@login_required(login_url="login")
 def index(response, id):
     #return HttpResponse("<h1>WebDev 101!</h1>")
     my_dict = {}
@@ -37,6 +39,7 @@ def index(response, id):
 def home(response):
     return render(response, "main/home.html", {})     
 
+@login_required(login_url="login")
 def create(response):
     if response.method == "POST":
         form = CreateNewList(response.POST)
