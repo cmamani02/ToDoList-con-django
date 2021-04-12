@@ -25,7 +25,7 @@ SECRET_KEY = 'c-3s8=el)__cfy!b!gl1@52a8msaf6(52x=(j#od60vg&n-v0$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mamani02-todolist.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['cmamani02-todolist.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
